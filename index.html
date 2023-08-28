@@ -3,8 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formulario</title>
+<link rel="icon" type="" href="./Img/Logo sura.jpg">
+<title>Certificados tributarios</title>
+
 <style>
+
+@font-face {
+    font-family: "FSJoey-Medium";
+    src: url(FSJoey-Medium.otf);
+    
+    }
+
 
 :root{
     --azul-oscuro-sura:#0033A0;
@@ -19,7 +28,7 @@
 
 body {
     background-color: #FFFFFF;
-    font-family: Arial, sans-serif;
+    font-family: "FSJoey-Medium",Arial, sans-serif;
     text-align: left;
     color: white;
     margin: 0;
@@ -40,6 +49,7 @@ body {
     background-color:var(--gris-claro-sura);
     border-radius: 10px;
     box-sizing: border-box;
+    font-family: "FSJoey-Medium";
   }
 
   label {
@@ -65,7 +75,9 @@ body {
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
+    font-family: "FSJoey-Medium";
   }
+  input[type="submit"]:hover{background-color:var(--azul-claro-sura)}
 
   .boton{
     justify-content: center;
@@ -207,33 +219,6 @@ body {
       const certificadoSolicitado = document.getElementById('tipoFormulario').value;
       const nombre = document.getElementById('nombre').value;
       /*const adjuntoFile = adjuntoInput.files[0];*/
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
       
       const datos = {
         "tipoDocumento": tipoDocumento,
