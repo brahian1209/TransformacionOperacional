@@ -5,10 +5,22 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Formulario</title>
 <style>
+
+:root{
+    --azul-oscuro-sura:#0033A0;
+    --verde-claro-sura:#ECF166;
+    --azul-claro-sura:#00AEC7;
+    --gris-claro-sura:#BBBCBC;
+    --blanco-sura:#FFFFFF;
+    --amarillo-tigre-sura:#FFD635;
+    --gris-sura:#54585A;
+    --negro-sura:#101820;
+}
+
 body {
-    background-color: #53565A;
+    background-color: #FFFFFF;
     font-family: Arial, sans-serif;
-    text-align: center;
+    text-align: left;
     color: white;
     margin: 0;
     padding: 0;
@@ -21,10 +33,11 @@ body {
     min-height: 100vh;
   }
 
+
   form {
     width: 400px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color:var(--gris-claro-sura);
     border-radius: 10px;
     box-sizing: border-box;
   }
@@ -40,8 +53,8 @@ body {
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
-    background-color: rgba(128, 128, 128, 0.3);
-    color: white;
+    background-color: var(--blanco-sura);
+    color: var(--gris-sura);
     box-sizing: border-box;
   }
 
@@ -54,13 +67,19 @@ body {
     cursor: pointer;
   }
 
+  .boton{
+    justify-content: center;
+    display: flex;
+  }
+
+
   #popup {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color:var(--azul-oscuro-sura);
     padding: 20px;
     border-radius: 10px;
     z-index: 999;
@@ -71,7 +90,7 @@ body {
   }
 
   #close-button {
-    background-color: #0033A0;
+    background-color: var(--gris-claro-sura);
     color: white;
     border: none;
     border-radius: 5px;
@@ -124,8 +143,16 @@ body {
       <select id="tipoFormulario" name="tipoFormulario" required>
         <!-- Opciones de acuerdo a la selección de tipoSolucion -->
       </select>
+       <!-- 
+      <label for="adjunto">Adjuntar archivo:</label>
+      <input type="file" id="adjunto" name="adjunto">
 
+      esta cualidad es para enviar datos adjuntos
+
+      -->
+    <div class="boton">
       <input type="submit" value="Enviar">
+    </div>
     </form>
   </div>
 
@@ -144,6 +171,7 @@ body {
     const formulario = document.getElementById('formulario');
     const popup = document.getElementById('popup');
     const closeButton = document.getElementById('close-button');
+    const adjuntoInput = document.getElementById('adjunto');
 
     tipoSolucionSelect.addEventListener('change', (event) => {
       const selectedOption = event.target.value;
@@ -178,7 +206,35 @@ body {
       const correoElectronico = document.getElementById('correo').value;
       const certificadoSolicitado = document.getElementById('tipoFormulario').value;
       const nombre = document.getElementById('nombre').value;
+      /*const adjuntoFile = adjuntoInput.files[0];*/
 
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
       const datos = {
         "tipoDocumento": tipoDocumento,
         "numeroDocumento": numeroDocumento,
